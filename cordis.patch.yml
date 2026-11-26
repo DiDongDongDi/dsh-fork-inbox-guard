@@ -1,0 +1,4 @@
+# dsh-fork-inbox-guard — drop queue items a fork child inherited from its parent.
+- insert:
+    - id: fork-inbox-guard
+      name: dsh-fork-inbox-guard

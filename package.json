@@ -1,0 +1,41 @@
+{
+  "name": "dsh-fork-inbox-guard",
+  "version": "0.1.0",
+  "description": "Host plugin that drops the pending prompts a forked DSH session inherited from its parent, so the child queue starts empty.",
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "cordis",
+    "session-fork",
+    "inbox"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "cordis.patch.yml",
+    "README.zh.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "node --test test/guard.test.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DiDongDongDi/dsh-fork-inbox-guard.git"
+  }
+}
